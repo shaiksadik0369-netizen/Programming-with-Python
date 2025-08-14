@@ -45,3 +45,67 @@
 #     if i not in unique:
 #         print(i, ":", chars.count(i))
 #         unique.append(i)
+
+
+a = input("Enter Your Word: ") 
+b = "" 
+for c in a: 
+    b = c + b 
+print(b) 
+Output: 
+Enter Your Word: Hello Ongole 
+elognO olleH 
+
+
+2️. Check if a String is a Palindrome 
+a = input("Enter a string: ") 
+if a == a[::-1]: 
+    print("Palindrome") 
+else: 
+    print("Not a Palindrome") 
+Output: 
+Enter a string: madam 
+Palindrome 
+
+3️. Count Vowels & Consonants in a String 
+s = input("Enter a string: ") 
+vowels = "aeiou" 
+v_count = 0 
+c_count = 0 
+for char in s.lower(): 
+    if char.isalpha(): 
+        if char in vowels: 
+            v_count += 1 
+        else: 
+            c_count += 1 
+
+print("Vowels:", v_count) 
+print("Consonants:", c_count) 
+Output: 
+Enter a string: mahendra kumar 
+Vowels: 5 
+Consonants: 8 
+
+4️. Remove All Spaces from a String 
+s = input("Enter a string: ") 
+no_space = "" 
+for char in s: 
+    if char != " ": 
+        no_space += char 
+print("String without spaces:", no_space) 
+Output: 
+Enter a string: mahendra kumar gorantla 
+String without spaces: mahendrakumargorantla 
+
+5️. Count Frequency of Each Character 
+s = input("Enter a string: ") 
+freq = {} 
+for char in s: 
+    if char in freq: 
+        freq[char] += 1 
+    else: 
+        freq[char] = 1 
+print("Character Frequency:", freq) 
+Output: 
+Enter a string: mahendra kumar gorantla 
+Character Frequency: {'m': 2, 'a': 5, 'h': 1, 'e': 1, 'n': 2, 'd': 1, 'r': 3, ' ': 2, 'k': 1, 'u': 1, 'g': 1, 'o': 1, 't': 1, 'l': 1} 
